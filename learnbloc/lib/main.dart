@@ -13,4 +13,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//mengubah
+//mengubah rizki
