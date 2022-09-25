@@ -15,3 +15,4 @@ class MyApp extends StatelessWidget {
 
 //mengubah rizki adfasfasf
 //uji coba push
+//uji coba git rizki
