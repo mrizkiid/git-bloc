@@ -9,9 +9,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      home: Scaffold(),
+    );
   }
 }
 
 //mengubah rizki adfasfasf
 //uji coba push
+//uji coba git rizki
