@@ -10,11 +10,36 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        floatingActionButton: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            FloatingActionButton(
+              onPressed: () {},
+              backgroundColor: Colors.amber,
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            FloatingActionButton(
+              onPressed: () {},
+              backgroundColor: Colors.lightBlue,
+            )
+          ],
+        ),
+        appBar: AppBar(
+          title: Text("Bloc tanpa Libary"),
+        ),
+        body: Center(
+          child: AnimatedContainer(
+            duration: Duration(seconds: 10),
+            width: 100,
+            height: 100,
+            color: Colors.amber,
+          ),
+        ),
+      ),
     );
   }
 }
-
-//mengubah rizki adfasfasf
-//uji coba push
-//uji coba git rizki
