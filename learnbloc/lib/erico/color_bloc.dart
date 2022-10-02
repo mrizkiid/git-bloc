@@ -8,11 +8,11 @@ enum ColorEvent { to_amber, to_light_blue }
 class ColorBloc {
   Color _color = Colors.amber;
 
-  StreamController<ColorEvent> _eventController =
+  final StreamController<ColorEvent> _eventController =
       StreamController<ColorEvent>();
-  StreamSink<ColorEvent> get EventSink => _eventController.sink;
+  StreamSink<ColorEvent> get eventSink => _eventController.sink;
 
-  StreamController<Color> _stateController = StreamController<Color>();
+  final StreamController<Color> _stateController = StreamController<Color>();
   StreamSink<Color> get _stateSink => _stateController.sink;
   Stream<Color> get stateStream => _stateController.stream;
 
@@ -21,17 +21,17 @@ class ColorBloc {
       _color = Colors.amber;
     } else {
       _color = Colors.lightBlue;
+    }
+    _stateSink.add(_color);
+  }
 
-      _stateSink.add(_color);
-    }
-    ColorBloc() {
-      _eventController.stream.listen(_mapEventToState);
-    }
+  ColorBloc() {
+    _eventController.stream.listen(_mapEventToState);
+  }
 
-    void dispose() {
-      _eventController.close();
-      _stateController.close();
-    }
+  void dispose() {
+    _eventController.close();
+    _stateController.close();
   }
 }
 
