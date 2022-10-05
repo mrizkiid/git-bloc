@@ -1,38 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'dart:developer';
-
-import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
-class CounterCubit extends Cubit<int> {
-  CounterCubit({this.inisial = 0}) : super(inisial);
-
-  int inisial;
-  int? current;
-  int? next;
-  void tambah() {
-    emit(state + 1);
-  }
-
-  void kurang() {
-    emit(state - 1);
-  }
-
-  //obsever
-  ///perubahan
-  ///error
-  ///
-
-  @override
-  void onChange(Change<int> change) {
-    super.onChange(change);
-    current = change.currentState;
-    next = change.nextState;
-  }
-}
+import 'package:learnbloc/kuldi_basic_cubit/cubit_file.dart';
 
 class BasicCubit extends StatefulWidget {
   const BasicCubit({Key? key}) : super(key: key);
