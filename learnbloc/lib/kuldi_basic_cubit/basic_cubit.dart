@@ -11,7 +11,7 @@ class BasicCubit extends StatefulWidget {
 }
 
 class _BasicCubitState extends State<BasicCubit> {
-  CounterCubit mycounter = CounterCubit();
+  CounterCubit mycounter = CounterCubit(inisial: 10);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
