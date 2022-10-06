@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:learnbloc/bloc_consumer/kuldi_consumer.dart';
+import 'package:learnbloc/bloc_listener/kuldi_bloc_listener.dart';
 import 'package:learnbloc/erico/bloc_erico.dart';
 import 'package:learnbloc/kuldi_basic_cubit/basic_cubit.dart';
 import 'package:learnbloc/kuldi_bloc_builder/kuldi_bloc.dart';
@@ -14,10 +16,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        // home: EricoBloc()
-        // home: KuldiStream()
-        // home: BasicCubit()
-        home: KuldiBlocBuilder());
+      debugShowCheckedModeBanner: false,
+      // home: EricoBloc()
+      // home: KuldiStream()
+      // home: BasicCubit()
+      // home: KuldiBlocBuilder()
+      // home: BlocListenerKuldi()
+      home: BlocConsumerKuldi(),
+    );
   }
 }

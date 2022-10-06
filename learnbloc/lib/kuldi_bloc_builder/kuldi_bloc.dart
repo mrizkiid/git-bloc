@@ -21,7 +21,7 @@ class KuldiBlocBuilder extends StatelessWidget {
               if (current % 2 == 0) {
                 return true;
               } else {
-                false;
+                return false;
               }
             },
             builder: (context, state) {
@@ -31,6 +31,7 @@ class KuldiBlocBuilder extends StatelessWidget {
               );
             },
           ),
+
           // StreamBuilder(
           //   initialData: mycounter.init,
           //   stream: mycounter.stream,
