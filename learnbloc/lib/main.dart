@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learnbloc/bloc_consumer/kuldi_consumer.dart';
+import 'package:learnbloc/bloc_dependencies_injection/provider_dua.dart';
 import 'package:learnbloc/bloc_listener/kuldi_bloc_listener.dart';
 import 'package:learnbloc/bloc_provider/kuldi_bloc_proveider.dart';
 import 'package:learnbloc/erico/bloc_erico.dart';
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
         // home: KuldiBlocBuilder()
         // home: BlocListenerKuldi()
         // home: BlocConsumerKuldi(),
-        home: KuldiBlocProvider(),
+        // home: KuldiBlocProvider(),
+        home: ProviderDua(),
       ),
     );
   }
